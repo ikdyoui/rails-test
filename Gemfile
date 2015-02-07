@@ -44,3 +44,9 @@ group :development, :test do
   gem 'guard-livereload', '~> 2.1.1', require: false
 end
 
+group :production do
+  gem 'rails_12factor'
+  #gem 'pg'
+  gem 'unicorn'
+end
+
