@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :hoges
+
   post "tweets" => "tweets#create"
   get 'tweets/index'
 
