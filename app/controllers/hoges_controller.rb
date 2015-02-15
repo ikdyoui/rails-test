@@ -4,7 +4,7 @@ class HogesController < ApplicationController
   # GET /hoges
   # GET /hoges.json
   def index
-    @hoges = Hoge.all
+    @hoges = Hoge.alll(1)
     # @hoges = ret_hoges
   end
 
