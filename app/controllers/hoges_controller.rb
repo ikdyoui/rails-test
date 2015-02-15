@@ -5,6 +5,7 @@ class HogesController < ApplicationController
   # GET /hoges.json
   def index
     @hoges = Hoge.all
+    # @hoges = ret_hoges
   end
 
   # GET /hoges/1
@@ -70,5 +71,9 @@ class HogesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def hoge_params
       params.require(:hoge).permit(:name, :email, :phone, :coffee)
+    end
+
+    def ret_hoges
+      Hoge.where('coffee > ?', 1)
     end
 end
