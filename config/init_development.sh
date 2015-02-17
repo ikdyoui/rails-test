@@ -14,12 +14,13 @@ fi
 
 #bundle install --path vendor/bundle --without development test
 bundle install --path vendor/bundle --without production
-sudo su - postgres -c 'createuser --echo --port=5432 --host=localhost --no-password rails-test'
+sudo su - postgres -c 'createuser rails-test'
+# sudo su - postgres -c 'createuser --echo --port=5432 --host=localhost --no-password rails-test'
 ##bundle exec rake db:create RAILS_ENV=production
 ##bundle exec rake db:create
 #sudo su - postgres -c 'createdb rails-test_production'
-# sudo su - postgres -c 'createdb rails-test_development'
-sudo su - postgres -c 'createdb --echo --port=5432 --host=localhost --locale=ja_JP.UTF8 --encoding=UTF8 rails-test_development'
+sudo su - postgres -c 'createdb rails-test_development'
+# sudo su - postgres -c 'createdb --echo --port=5432 --host=localhost --locale=ja_JP.UTF8 --encoding=UTF8 rails-test_development'
 #bundle exec rake db:migrate RAILS_ENV=production
 bundle exec rake db:migrate
 
