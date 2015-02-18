@@ -20,7 +20,7 @@ sudo su - postgres -c 'createuser rails-test'
 ##bundle exec rake db:create
 #sudo su - postgres -c 'createdb rails-test_production'
 sudo su - postgres -c 'createdb rails-test_development'
-# sudo su - postgres -c 'createdb --echo --port=5432 --host=localhost --locale=ja_JP.UTF8 --encoding=UTF8 rails-test_development'
+# sudo su - postgres -c 'createdb --echo --port=5432 --host=localhost --locale=ja_JP.UTF-8 --encoding=UTF8 --template=template0 rails-test_development'
 #bundle exec rake db:migrate RAILS_ENV=production
 bundle exec rake db:migrate
 
